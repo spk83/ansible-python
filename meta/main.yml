@@ -15,8 +15,7 @@ galaxy_info:
         - xenial
     - name: Alpine
       versions:
-        - "3.6"
-        - edge
+        - any
     - name: Debian
       versions:
         - jessie
