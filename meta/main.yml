@@ -1,7 +1,7 @@
 ---
 galaxy_info:
-  author: Andrew Rothstein
-  description: python role
+  author: Vishal Shah
+  description: Install Python3 and related packages
   company: BlackRock
   license:
     - MIT
@@ -10,15 +10,13 @@ galaxy_info:
     - name: EL
       versions:
         - all
-    - name: Fedora
-      versions:
-        - all
     - name: Ubuntu
       versions:
-        - all
+        - xenial
     - name: Alpine
       versions:
-        - all
+        - "3.6"
+        - edge
     - name: Debian
       versions:
         - jessie

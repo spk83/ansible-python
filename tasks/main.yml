@@ -2,14 +2,17 @@
 - name: resolve platform specific vars
   include_vars: "{{item}}"
   with_first_found:
-    - "{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
-    - "{{ansible_distribution}}.yml"
-    - "{{ansible_os_family}}.yml"
+    - "{{ansible_distribution | replace(' ', '') | lower}}-{{ansible_distribution_release | replace(' ', '') | lower}}.yml"
+    - "{{ansible_distribution | replace(' ', '') | lower}}.yml"
+    - "{{ansible_os_family | replace(' ', '') | lower}}.yml"
+
+- include_tasks: redhat.yml
+  when: ansible_os_family == 'RedHat'
 
 - name: installing python os pkgs...
   become: yes
   become_user: root
-  with_items: '{{python_pkgs}}'
+  with_items: '{{python3_pkgs}}'
   package:
     name: '{{item}}'
     state: present

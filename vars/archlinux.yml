@@ -1,6 +1,7 @@
 ---
-python_pkgs:
+python3_pkgs:
   - python
-  - python-dev
   - python-virtualenv
   - python-pip
+
+python3_system_default: true

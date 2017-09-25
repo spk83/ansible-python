@@ -1,1 +1,8 @@
 ---
+
+# python should refer to  python3
+# Not recommended as per http://legacy.python.org/dev/peps/pep-0394/
+python3_set_system_default: false
+
+# Minor version enforced only in RedHat images 
+python3_version: "3.6"

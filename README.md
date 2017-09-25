@@ -1,8 +1,8 @@
-andrewrothstein.python
+spk83.python3
 ===========================
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-python.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-python)
+[![Build Status](https://travis-ci.org/spk83/ansible-python.svg?branch=master)](https://travis-ci.org/spk83/ansible-python)
 
-A role for installing a [Python 2](https://www.python.org/) development environment from operating system packages including [pip](https://pypi.python.org/pypi/pip) and [virtualenv](https://pypi.python.org/pypi/virtualenv).
+A role for installing a [Python 3](https://www.python.org/) development environment from operating system packages including [pip](https://pypi.python.org/pypi/pip) and [virtualenv](https://pypi.python.org/pypi/virtualenv).
 
 Requirements
 ------------
@@ -25,7 +25,7 @@ Example Playbook
 ```yml
 - hosts: servers
   roles:
-    - andrewrothstein.python
+    - spk83.python3
 ```
 
 License
@@ -36,4 +36,4 @@ MIT
 Author Information
 ------------------
 
-Andrew Rothstein <andrew.rothstein@gmail.com>
+Vishal Shah <vishal.shah@nyu.edu>
