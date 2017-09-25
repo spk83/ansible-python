@@ -1,6 +1,6 @@
 spk83.python3
 ===========================
-[![Build Status](https://travis-ci.org/spk83/ansible-python.svg?branch=master)](https://travis-ci.org/spk83/ansible-python)
+[![Build Status](https://travis-ci.org/spk83/ansible-python3.svg?branch=master)](https://travis-ci.org/spk83/ansible-python3)
 
 A role for installing a [Python 3](https://www.python.org/) development environment from operating system packages including [pip](https://pypi.python.org/pypi/pip) and [virtualenv](https://pypi.python.org/pypi/virtualenv).
 
