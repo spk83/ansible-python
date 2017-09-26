@@ -5,4 +5,4 @@
 python3_set_system_default: false
 
 # Minor version enforced only in RedHat images 
-python3_version: "3.6"
+python3_desired_version: "3.6"

@@ -3,3 +3,4 @@
   roles:
     - role: andrewrothstein.pkg-upgrade
     - role: '{{playbook_dir}}'
+      python3_set_system_default: true

@@ -1,5 +1,8 @@
 ---
+python3_version: "{{python3_desired_version}}"
+
 python3_redhat_version: "python{{python3_version | replace('.','')}}u"
+
 python3_pkgs:
   - "{{python3_redhat_version}}"
   - "{{python3_redhat_version}}-devel"
