@@ -4,3 +4,9 @@
     - role: andrewrothstein.pkg-upgrade
     - role: '{{playbook_dir}}'
       python3_set_system_default: true
+  tasks:
+    - shell: python -c "import platform; print(platform.python_version())"
+      register: version
+
+    - fail: msg="Python not configured as expected"
+      when: version | version_compare('3.4', '<')

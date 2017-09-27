@@ -23,8 +23,6 @@
   with_items:
     - s: python{{python3_version | default(3)}}
       d: python
-    - s: pip{{python3_version | default(3)}}
-      d: pip
   when: python3_set_system_default and not (python3_system_default | default(false))
   alternatives:
     name: "{{item.d}}"
