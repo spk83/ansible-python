@@ -20,13 +20,17 @@
 - name: Make python3 system-wide default
   become: yes
   become_user: root
-  with_items:
-    - s: python{{python3_version | default(3)}}
-      d: python
-    - s: pip{{python3_version | default(3)}}
-      d: pip
   when: python3_set_system_default and not (python3_system_default | default(false))
-  alternatives:
-    name: "{{item.d}}"
-    link: /usr/bin/{{item.d}}
-    path: /usr/bin/{{item.s}}
+  block:
+    - file:
+        path: /usr/bin/pip
+        state: absent
+    - with_items:
+        - s: python{{python3_version | default(3)}}
+          d: python
+        - s: pip{{python3_version | default(3)}}
+          d: pip
+      alternatives:
+        name: "{{item.d}}"
+        link: /usr/bin/{{item.d}}
+        path: /usr/bin/{{item.s}}
